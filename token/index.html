@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Token - HACS</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="..">HACS</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../installation.md">Installation</a>
+                            </li>
+                            <li >
+                                <a href="../faq/">FAQ</a>
+                            </li>
+                            <li >
+                                <a href="../developer/">Developer?</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li>
+                                <a href="https://github.com/custom-components/hacs/edit/master/docs/token.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#github-personal-access-token">Github Personal Access Token</a></li>
+            <li><a href="#step-1-open-browser">Step 1 - Open browser</a></li>
+            <li><a href="#step-2-go-to-your-github-developer-settings">Step 2 - Go to your GitHub "Developer settings"</a></li>
+            <li><a href="#step-3-start-generation">Step 3 - Start generation</a></li>
+            <li><a href="#step-4-choices">Step 4 - Choices</a></li>
+            <li><a href="#step-5-copy">Step 5 - Copy</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<hr />
+<p><a href="/hacs/">HOME</a> | <a href="/hacs/install">INSTALLATION</a> | <a href="/hacs/configure">CONFIGURATION</a> | <a href="/hacs/token"><strong>TOKEN</strong></a> | <a href="/hacs/faq">FAQ</a></p>
+<hr />
+<h1 id="github-personal-access-token">Github Personal Access Token</h1>
+<p><em>You need to generate an Access Token to your account before you start using this.</em></p>
+<h2 id="step-1-open-browser">Step 1 - Open browser</h2>
+<p><em>You are probably looking at this in a browser, so we can probably check this off.</em></p>
+<h2 id="step-2-go-to-your-github-developer-settings">Step 2 - Go to your GitHub "Developer settings"</h2>
+<p><em>And then "Personal access tokens."</em>
+or click here: <a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a></p>
+<h2 id="step-3-start-generation">Step 3 - Start generation</h2>
+<p>Click the "Generate new token" button.</p>
+<p><img alt="token1" src="../images/token1.png" /></p>
+<p><em>If you are asked to login, do so.</em></p>
+<p><img alt="token2" src="../images/token2.png" /></p>
+<h2 id="step-4-choices">Step 4 - Choices</h2>
+<p>First give it a logical name so that you can recognise it.</p>
+<p>Then click the "Generate token" button at the bottom.</p>
+<p>You <strong>do not</strong> need to check <em>any</em> of the boxes.</p>
+<p><img alt="token3" src="../images/token3.png" /></p>
+<h2 id="step-5-copy">Step 5 - Copy</h2>
+<p>Now you see the generated token, this will be the <strong>only</strong> time you see it, make sure that you copy it manually or by clicking the clipboard icon.</p>
+<p><img alt="token4" src="../images/token4.png" /></p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

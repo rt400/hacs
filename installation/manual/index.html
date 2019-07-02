@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://custom-components.github.io/hacs/installation/manual/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Manual - HACS</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">HACS</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Installation <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li class="active">
+    <a href="./">Manual</a>
+</li>
+                                    
+<li >
+    <a href="../terminal/">Terminal</a>
+</li>
+                                    
+<li >
+    <a href="../configuration/">Configuration</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Usage <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../usage/overview/">Overview</a>
+</li>
+                                    
+<li >
+    <a href="../../usage/store/">Store</a>
+</li>
+                                    
+<li >
+    <a href="../../usage/settings/">Settings</a>
+</li>
+                                    
+<li >
+    <a href="../../usage/repository/">Repository</a>
+</li>
+                                    
+<li >
+    <a href="../../usage/gallery/">Gallery</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="../../faq/">FAQ</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Developer? <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../developer/general/">General</a>
+</li>
+                                    
+<li >
+    <a href="../../developer/appdaemon/">AppDaemon developer</a>
+</li>
+                                    
+<li >
+    <a href="../../developer/integration/">Integration developer</a>
+</li>
+                                    
+<li >
+    <a href="../../developer/plugin/">Plugin developer</a>
+</li>
+                                    
+<li >
+    <a href="../../developer/python_script/">python_script developer</a>
+</li>
+                                    
+<li >
+    <a href="../../developer/theme/">Theme developer</a>
+</li>
+                                    
+<li >
+    <a href="../../developer/include_default_repositories/">Include default repositories</a>
+</li>
+                                    
+<li >
+    <a href="../../developer/blacklist_repository/">Blacklist a Repository</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="https://github.com/custom-components/hacs/issues">Issues</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                            <li >
+                                <a rel="next" href="../..">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../terminal/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/custom-components/hacs/edit/master/docs/installation/manual.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#installation">Installation</a></li>
+            <li><a href="#prerequisittes">Prerequisittes</a></li>
+            <li><a href="#installation-steps">Installation steps</a></li>
+            <li><a href="#moving-from-custom_updater">Moving from custom_updater</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h1>
+<p>This integration requires <strong>a lot</strong> of files.</p>
+<p>The easiest way to make sure that you have them all is to download the <code>.zip</code> file from the repository.</p>
+<h2 id="prerequisittes">Prerequisittes<a class="headerlink" href="#prerequisittes" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>You need to use Home Assistant version 0.92.0 or newer for this to work.</strong></li>
+<li><strong>If you move from <a href="https://github.com/custom-components/custom_updater"><code>custom_updater</code></a> to this see the special note at the bottom here.</strong></li>
+</ul>
+<h2 id="installation-steps">Installation steps<a class="headerlink" href="#installation-steps" title="Permanent link">&para;</a></h2>
+<p>If you want to download using a terminal (and git) <a href="../terminal">look here</a></p>
+<h3 id="step-1-open-browser">Step 1 - Open browser<a class="headerlink" href="#step-1-open-browser" title="Permanent link">&para;</a></h3>
+<p><em>You are probably looking at this in a browser, so we can probably check this off.</em></p>
+<h3 id="step-2-go-to-the-hacs-repository">Step 2 - Go to the HACS repository<a class="headerlink" href="#step-2-go-to-the-hacs-repository" title="Permanent link">&para;</a></h3>
+<p>Then find the latest release from the release page.</p>
+<p>Shortcut: <a href="https://github.com/custom-components/hacs/releases/latest">https://github.com/custom-components/hacs/releases/latest</a></p>
+<h3 id="step-3-initialize-download">Step 3 - Initialize Download<a class="headerlink" href="#step-3-initialize-download" title="Permanent link">&para;</a></h3>
+<p>Initialize the download by clicking on the "<strong>Source code</strong> (zip)" link at the bottom of the page.</p>
+<p><img alt="install2" src="../../images/install2.png" /></p>
+<h3 id="step-4-extract-the-content">Step 4 - Extract the content<a class="headerlink" href="#step-4-extract-the-content" title="Permanent link">&para;</a></h3>
+<p>There should now be a <code>hacs-VERSION_NUMBER.zip</code> (like <code>hacs-0.9.0.zip</code>) file in your Download folder.</p>
+<p>You need to unzip this, before proceeding.</p>
+<h3 id="step-5-move-along">Step 5 - Move along<a class="headerlink" href="#step-5-move-along" title="Permanent link">&para;</a></h3>
+<p>Now that you have extracted all the files you will see something like this:</p>
+<p><img alt="install3" src="../../images/install3.png" /></p>
+<p>In the <code>custom_components</code> named, there is a folder named <code>hacs</code>.</p>
+<p>The folder named <code>hacs</code> would need to be copied to your Home Assistant installation.</p>
+<p>For this use your favorite tool to get stuff to Home Assistant.</p>
+<p>If this is your first custom_component you would need to create a new folder (see step 6).</p>
+<p>If this is not your first, you should know where to place the <code>hacs</code> folder, and if this is not your first why are you reading this? you have done this earlier and should know this by now :D</p>
+<p>Anyway the <code>hacs</code> folder needs to be placed under <code>&lt;config_dir&gt;/custom_components/</code></p>
+<p>On Hassio the final location will be <code>/config/custom_components/hacs</code></p>
+<p>On Hassbian the final location will be <code>/home/homeassistant/.homeassistant/custom_components/hacs</code></p>
+<h3 id="step-6-bonus">Step 6 - (Bonus)<a class="headerlink" href="#step-6-bonus" title="Permanent link">&para;</a></h3>
+<p>If you are a seasoned user, skip to step 7.</p>
+<p>Cool you are still reading.</p>
+<p>Open the folder where you have your <code>configuration.yaml</code> file.
+Don't open that file (yet) just the folder for now.</p>
+<p>If you see a folder named <code>custom_components</code> there, go back to Step 5 if you think you need to do something here.</p>
+<p>If you <strong>do not</strong> see a <code>custom_components</code> folder in <strong>the same</strong> folder as <code>configuration.yaml</code>, you need to create it.</p>
+<p>The <code>custom_components</code> <strong>needs</strong> to be in <strong>the exact same</strong> folder as <code>configuration.yaml</code></p>
+<h3 id="step-7-restart-home-assistant">Step 7 - Restart Home Assistant<a class="headerlink" href="#step-7-restart-home-assistant" title="Permanent link">&para;</a></h3>
+<p>Restart Home Assistant once before moving on to step 8.</p>
+<h3 id="step-8-">Step 8 - ✏️<a class="headerlink" href="#step-8-" title="Permanent link">&para;</a></h3>
+<p><a href="../configuration">You should now be done, next part will be to add it to your configuration.</a></p>
+<h2 id="moving-from-custom_updater">Moving from <a href="https://github.com/custom-components/custom_updater"><code>custom_updater</code></a><a class="headerlink" href="#moving-from-custom_updater" title="Permanent link">&para;</a></h2>
+<p>If you have <a href="https://github.com/custom-components/custom_updater"><code>custom_updater</code></a> installed you need to remove that (rename the directory or delete it completely). You will also need to remove the custom_updater entry from your configuration.yaml file.</p>
+<p>HACS and <a href="https://github.com/custom-components/custom_updater"><code>custom_updater</code></a> can not operate on the same installation.</p>
+<p>If you used the special endpoint <code>/customcards/</code> endpoint for your Lovelace cards, you now need to reinstall that plugin using HACS and use the url provided in the page for that plugin in the HACS UI, if the plugin is not there you need to use <code>/local/</code> instead.</p>
+<p>As noted under <a href="../../#existing-elements">'Existing elements'</a> You need to click the "INSTALL" button for each element you previously have installed.</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+
+        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

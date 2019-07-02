@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://custom-components.github.io/hacs/installation/configuration/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Configuration - HACS</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">HACS</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Installation <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../manual/">Manual</a>
+</li>
+                                    
+<li >
+    <a href="../terminal/">Terminal</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">Configuration</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Usage <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../usage/overview/">Overview</a>
+</li>
+                                    
+<li >
+    <a href="../../usage/store/">Store</a>
+</li>
+                                    
+<li >
+    <a href="../../usage/settings/">Settings</a>
+</li>
+                                    
+<li >
+    <a href="../../usage/repository/">Repository</a>
+</li>
+                                    
+<li >
+    <a href="../../usage/gallery/">Gallery</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="../../faq/">FAQ</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Developer? <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../developer/general/">General</a>
+</li>
+                                    
+<li >
+    <a href="../../developer/appdaemon/">AppDaemon developer</a>
+</li>
+                                    
+<li >
+    <a href="../../developer/integration/">Integration developer</a>
+</li>
+                                    
+<li >
+    <a href="../../developer/plugin/">Plugin developer</a>
+</li>
+                                    
+<li >
+    <a href="../../developer/python_script/">python_script developer</a>
+</li>
+                                    
+<li >
+    <a href="../../developer/theme/">Theme developer</a>
+</li>
+                                    
+<li >
+    <a href="../../developer/include_default_repositories/">Include default repositories</a>
+</li>
+                                    
+<li >
+    <a href="../../developer/blacklist_repository/">Blacklist a Repository</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="https://github.com/custom-components/hacs/issues">Issues</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                            <li >
+                                <a rel="next" href="../terminal/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../../usage/overview/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/custom-components/hacs/edit/master/docs/installation/configuration.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#configuration">Configuration</a></li>
+            <li><a href="#example-configuration">Example configuration</a></li>
+            <li><a href="#github-personal-access-token">Github Personal Access Token</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h1>
+<p><strong>NB! This needs to be in <code>configuration.yaml</code>, <em>not</em> in a "package".</strong></p>
+<p>HACS uses the GitHub API to gather information.  Without authentication the usage of the API is limited to 60 calls per hour.
+The token generated below will only have read-only access to public information.</p>
+<h2 id="example-configuration">Example configuration<a class="headerlink" href="#example-configuration" title="Permanent link">&para;</a></h2>
+<pre><code class="yaml">hacs:
+  token: d73jds8f73jkr9d8sufv2br8sd9fy92nr9f80u23r97fhse
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>key</th>
+<th>optional</th>
+<th>default</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>token</code></td>
+<td>False</td>
+<td></td>
+<td>A Github Personal Access Token</td>
+</tr>
+<tr>
+<td><code>appdaemon</code></td>
+<td>True</td>
+<td><code>False</code></td>
+<td>Enable tracking of AppDaemon apps.</td>
+</tr>
+<tr>
+<td><code>python_script</code></td>
+<td>True</td>
+<td><code>False</code></td>
+<td>Enable tracking of python scripts.</td>
+</tr>
+<tr>
+<td><code>theme</code></td>
+<td>True</td>
+<td><code>False</code></td>
+<td>Enable tracking of themes.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>After adding it to the configuration you need to restart Home Assistant.</p>
+<h2 id="github-personal-access-token">Github Personal Access Token<a class="headerlink" href="#github-personal-access-token" title="Permanent link">&para;</a></h2>
+<p><em>You need to generate an Access Token to your account before you start using this.</em></p>
+<h3 id="step-1-open-browser">Step 1 - Open browser<a class="headerlink" href="#step-1-open-browser" title="Permanent link">&para;</a></h3>
+<p><em>You are probably looking at this in a browser, so we can probably check this off.</em></p>
+<h3 id="step-2-go-to-your-github-developer-settings">Step 2 - Go to your GitHub "Developer settings"<a class="headerlink" href="#step-2-go-to-your-github-developer-settings" title="Permanent link">&para;</a></h3>
+<p><em>And then "Personal access tokens."</em>
+or click here: <a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a></p>
+<h3 id="step-3-start-generation">Step 3 - Start generation<a class="headerlink" href="#step-3-start-generation" title="Permanent link">&para;</a></h3>
+<p>Click the "Generate new token" button.</p>
+<p><img alt="token1" src="../../images/token1.png" /></p>
+<p><em>If you are asked to login, do so.</em></p>
+<p><img alt="token2" src="../../images/token2.png" /></p>
+<h3 id="step-4-choices">Step 4 - Choices<a class="headerlink" href="#step-4-choices" title="Permanent link">&para;</a></h3>
+<p>First give it a logical name so that you can recognize it.</p>
+<p>Then click the "Generate token" button at the bottom.</p>
+<p>You <strong>do not</strong> need to check <em>any</em> of the boxes.</p>
+<p><img alt="token3" src="../../images/token3.png" /></p>
+<h3 id="step-5-copy">Step 5 - Copy<a class="headerlink" href="#step-5-copy" title="Permanent link">&para;</a></h3>
+<p>Now you see the generated token, this will be the <strong>only</strong> time you see it, make sure that you copy it manually or by clicking the clipboard icon.</p>
+<p><img alt="token4" src="../../images/token4.png" /></p>
+<!-- Disable sidebar -->
+
+<script>
+let sidebar = document.getElementsByClassName("col-md-3")[0];
+sidebar.parentNode.removeChild(sidebar);
+document.getElementsByClassName("col-md-9")[0].style['padding-left'] = "0";
+</script>
+
+<!-- Disable sidebar --></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+
+        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

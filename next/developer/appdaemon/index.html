@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://custom-components.github.io/hacs/developer/appdaemon/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>AppDaemon developer - HACS</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">HACS</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Installation <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../installation/manual/">Manual</a>
+</li>
+                                    
+<li >
+    <a href="../../installation/terminal/">Terminal</a>
+</li>
+                                    
+<li >
+    <a href="../../installation/configuration/">Configuration</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Usage <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../usage/overview/">Overview</a>
+</li>
+                                    
+<li >
+    <a href="../../usage/store/">Store</a>
+</li>
+                                    
+<li >
+    <a href="../../usage/settings/">Settings</a>
+</li>
+                                    
+<li >
+    <a href="../../usage/repository/">Repository</a>
+</li>
+                                    
+<li >
+    <a href="../../usage/gallery/">Gallery</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="../../faq/">FAQ</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Developer? <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../general/">General</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">AppDaemon developer</a>
+</li>
+                                    
+<li >
+    <a href="../integration/">Integration developer</a>
+</li>
+                                    
+<li >
+    <a href="../plugin/">Plugin developer</a>
+</li>
+                                    
+<li >
+    <a href="../python_script/">python_script developer</a>
+</li>
+                                    
+<li >
+    <a href="../theme/">Theme developer</a>
+</li>
+                                    
+<li >
+    <a href="../include_default_repositories/">Include default repositories</a>
+</li>
+                                    
+<li >
+    <a href="../blacklist_repository/">Blacklist a Repository</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="https://github.com/custom-components/hacs/issues">Issues</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                            <li >
+                                <a rel="next" href="../general/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../integration/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/custom-components/hacs/edit/master/docs/developer/appdaemon.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#appdaemon-developers">AppDaemon developers</a></li>
+            <li><a href="#requirements">Requirements</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="appdaemon-developers">AppDaemon developers<a class="headerlink" href="#appdaemon-developers" title="Permanent link">&para;</a></h1>
+<p>A template to use as a reference is <a href="https://github.com/ludeeus/ad-hacs">ad-hacs</a></p>
+<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
+<p>For a AppDaemon app repository to be valid these are the requirements:</p>
+<h3 id="repository-structure">Repository structure<a class="headerlink" href="#repository-structure" title="Permanent link">&para;</a></h3>
+<ul>
+<li>There is only one app (one directory under <code>ROOT_OF_THE_REPO/apps/</code>) pr. repository (if you have more, only the first one will be managed.)</li>
+<li>The app (all the python files for it) are located under <code>ROOT_OF_THE_REPO/apps/APP_NAME/</code></li>
+<li>The app and all the python files for it are located under <code>ROOT_OF_THE_REPO/apps/APP_NAME/</code></li>
+</ul>
+<h4 id="ok-example">OK example:<a class="headerlink" href="#ok-example" title="Permanent link">&para;</a></h4>
+<pre><code class="text">apps/awesome/awesome.py
+info.md
+README.md
+</code></pre>
+
+<h4 id="not-ok-example-1">Not OK example (1):<a class="headerlink" href="#not-ok-example-1" title="Permanent link">&para;</a></h4>
+<pre><code class="text">awesome/awesome.py
+info.md
+README.md
+</code></pre>
+
+<h4 id="not-ok-example-2">Not OK example (2):<a class="headerlink" href="#not-ok-example-2" title="Permanent link">&para;</a></h4>
+<pre><code class="text">awesome.py
+info.md
+README.md
+</code></pre>
+
+<h3 id="github-releases-optional">GitHub releases (optional)<a class="headerlink" href="#github-releases-optional" title="Permanent link">&para;</a></h3>
+<h4 id="if-there-are-releases">If there are releases<a class="headerlink" href="#if-there-are-releases" title="Permanent link">&para;</a></h4>
+<p>When installing/upgrading it will scan the content in the latest release.</p>
+<p>If there are multiple releases in the repository the user have some options to install a specific version.
+The choices will be the last 5 releases and the default branch.</p>
+<h4 id="if-there-are-no-releases">If there are no releases<a class="headerlink" href="#if-there-are-no-releases" title="Permanent link">&para;</a></h4>
+<p>It will scan files in the branch marked as default.</p>
+<!-- Disable sidebar -->
+
+<script>
+let sidebar = document.getElementsByClassName("col-md-3")[0];
+sidebar.parentNode.removeChild(sidebar);
+document.getElementsByClassName("col-md-9")[0].style['padding-left'] = "0";
+</script>
+
+<!-- Disable sidebar --></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+
+        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://custom-components.github.io/hacs/faq/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>FAQ - HACS</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="..">HACS</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="..">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Installation <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../installation/manual/">Manual</a>
+</li>
+                                    
+<li >
+    <a href="../installation/terminal/">Terminal</a>
+</li>
+                                    
+<li >
+    <a href="../installation/configuration/">Configuration</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Usage <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../usage/overview/">Overview</a>
+</li>
+                                    
+<li >
+    <a href="../usage/store/">Store</a>
+</li>
+                                    
+<li >
+    <a href="../usage/settings/">Settings</a>
+</li>
+                                    
+<li >
+    <a href="../usage/repository/">Repository</a>
+</li>
+                                    
+<li >
+    <a href="../usage/gallery/">Gallery</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="active">
+                                <a href="./">FAQ</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Developer? <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../developer/general/">General</a>
+</li>
+                                    
+<li >
+    <a href="../developer/appdaemon/">AppDaemon developer</a>
+</li>
+                                    
+<li >
+    <a href="../developer/integration/">Integration developer</a>
+</li>
+                                    
+<li >
+    <a href="../developer/plugin/">Plugin developer</a>
+</li>
+                                    
+<li >
+    <a href="../developer/python_script/">python_script developer</a>
+</li>
+                                    
+<li >
+    <a href="../developer/theme/">Theme developer</a>
+</li>
+                                    
+<li >
+    <a href="../developer/include_default_repositories/">Include default repositories</a>
+</li>
+                                    
+<li >
+    <a href="../developer/blacklist_repository/">Blacklist a Repository</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="https://github.com/custom-components/hacs/issues">Issues</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                            <li >
+                                <a rel="next" href="../usage/gallery/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../developer/general/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/custom-components/hacs/edit/master/docs/faq.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#faq">FAQ</a></li>
+            <li><a href="#what-is-hacs">What is HACS?</a></li>
+            <li><a href="#is-this-for-hassio-only">Is this for hass.io only?</a></li>
+            <li><a href="#how-does-it-work-installation">How does it work: Installation</a></li>
+            <li><a href="#how-does-it-work-upgrade">How does it work: Upgrade</a></li>
+            <li><a href="#how-can-i-install-this">How can I install this.</a></li>
+            <li><a href="#known-limitations">Known limitations</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h1>
+<h2 id="what-is-hacs">What is HACS?<a class="headerlink" href="#what-is-hacs" title="Permanent link">&para;</a></h2>
+<p>HACS is an abbreviation of "Home Assistant Community Store".</p>
+<p>Although "Store" is not "technically" correct, since nothing is sold, it's more like a marketplace? but "HACM" didn't have the same ring to it.</p>
+<h3 id="highlights-of-what-hacs-can-do">Highlights of what HACS can do<a class="headerlink" href="#highlights-of-what-hacs-can-do" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Help you discover new custom elements.</li>
+<li>Help you install (download) new custom elements.</li>
+<li>Help you keep track of your custom elements.</li>
+</ul>
+<hr />
+<h2 id="is-this-for-hassio-only">Is this for hass.io only?<a class="headerlink" href="#is-this-for-hassio-only" title="Permanent link">&para;</a></h2>
+<p>No, it's not.</p>
+<p>You can use this on <em>any</em> Home Assistant installation.</p>
+<p><em>Windows might have issues, but if you are running HA on Windows you are probably used to that.</em></p>
+<hr />
+<h2 id="how-does-it-work-installation">How does it work: Installation<a class="headerlink" href="#how-does-it-work-installation" title="Permanent link">&para;</a></h2>
+<p>When you install an element this is what's happening:</p>
+<ol>
+<li>The local target directory(folder) is deleted.</li>
+<li>A new local target directory is created.</li>
+<li>All expected files are downloaded to that directory.</li>
+<li>The files it downloads depends on the type.</li>
+</ol>
+<h3 id="files-downloaded-for-appdaemon">Files downloaded for <code>appdaemon</code><a class="headerlink" href="#files-downloaded-for-appdaemon" title="Permanent link">&para;</a></h3>
+<p><em>Everything under the first directory in <code>apps</code></em></p>
+<p>The files are downloaded to <code>&lt;config_dir&gt;/appdaemon/apps/*</code></p>
+<h3 id="files-downloaded-for-integrations">Files downloaded for <code>integrations</code><a class="headerlink" href="#files-downloaded-for-integrations" title="Permanent link">&para;</a></h3>
+<p><em>Everything under the first directory in <code>custom_components</code></em></p>
+<p>The files are downloaded to <code>&lt;config_dir&gt;/custom_components/*</code></p>
+<h3 id="files-downloaded-for-plugins">Files downloaded for <code>plugins</code><a class="headerlink" href="#files-downloaded-for-plugins" title="Permanent link">&para;</a></h3>
+<p><em>Every <code>.js</code> file in the source directory, this can be on the release page, the <code>dist</code> directory, or the root of the repository.</em></p>
+<p><em>If it's the <code>dist</code> directory, it will download <strong>any</strong> file in that directory (and sub directories).</em></p>
+<p>When a <code>.js</code> file is downloaded, a compressed <code>.gz</code> version of if will be created, this file (if it exist) will be served to the requester to save transfer size/time.
+If you make local changes to a plugin in the <code>.js</code> file, delete the <code>.gz</code> variant to have HACS serve up that one.</p>
+<p>The files are downloaded to <code>&lt;config_dir&gt;/www/community/*</code></p>
+<h3 id="files-downloaded-for-python_script">Files downloaded for <code>python_script</code><a class="headerlink" href="#files-downloaded-for-python_script" title="Permanent link">&para;</a></h3>
+<p>The first file under the <code>python_scripts</code> directory._</p>
+<p>The files are downloaded to <code>&lt;config_dir&gt;/python_scripts/*</code></p>
+<h3 id="files-downloaded-for-theme">Files downloaded for <code>theme</code><a class="headerlink" href="#files-downloaded-for-theme" title="Permanent link">&para;</a></h3>
+<p>The first file under the <code>themes</code> directory._</p>
+<p>The files are downloaded to <code>&lt;config_dir&gt;/themes/*</code></p>
+<p>For this to work you need to include the themes directory like this:</p>
+<pre><code class="yaml">frontend:
+  themes: !include_dir_named themes
+</code></pre>
+
+<hr />
+<h2 id="how-does-it-work-upgrade">How does it work: Upgrade<a class="headerlink" href="#how-does-it-work-upgrade" title="Permanent link">&para;</a></h2>
+<p>The same as installation.</p>
+<hr />
+<h2 id="how-can-i-install-this">How can I install this.<a class="headerlink" href="#how-can-i-install-this" title="Permanent link">&para;</a></h2>
+<p>Look at the <a href="../installation/manual/">installation documentation.</a></p>
+<h2 id="known-limitations">Known limitations<a class="headerlink" href="#known-limitations" title="Permanent link">&para;</a></h2>
+<ul>
+<li>If you install/upgrade/remove or add a custom repository while the background task is running, do <strong>not</strong> restart Home Assistant until that task is done, if you do your action will not be saved.</li>
+</ul></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+
+        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

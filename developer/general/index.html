@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://custom-components.github.io/hacs/developer/general/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>General - HACS</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">HACS</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Installation <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../installation/manual/">Manual</a>
+</li>
+                                    
+<li >
+    <a href="../../installation/terminal/">Terminal</a>
+</li>
+                                    
+<li >
+    <a href="../../installation/configuration/">Configuration</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Usage <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../usage/overview/">Overview</a>
+</li>
+                                    
+<li >
+    <a href="../../usage/store/">Store</a>
+</li>
+                                    
+<li >
+    <a href="../../usage/settings/">Settings</a>
+</li>
+                                    
+<li >
+    <a href="../../usage/repository/">Repository</a>
+</li>
+                                    
+<li >
+    <a href="../../usage/gallery/">Gallery</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="../../faq/">FAQ</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Developer? <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li class="active">
+    <a href="./">General</a>
+</li>
+                                    
+<li >
+    <a href="../appdaemon/">AppDaemon developer</a>
+</li>
+                                    
+<li >
+    <a href="../integration/">Integration developer</a>
+</li>
+                                    
+<li >
+    <a href="../plugin/">Plugin developer</a>
+</li>
+                                    
+<li >
+    <a href="../python_script/">python_script developer</a>
+</li>
+                                    
+<li >
+    <a href="../theme/">Theme developer</a>
+</li>
+                                    
+<li >
+    <a href="../include_default_repositories/">Include default repositories</a>
+</li>
+                                    
+<li >
+    <a href="../blacklist_repository/">Blacklist a Repository</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="https://github.com/custom-components/hacs/issues">Issues</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                            <li >
+                                <a rel="next" href="../../faq/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../appdaemon/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/custom-components/hacs/edit/master/docs/developer/general.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#note-for-developers">Note for developers</a></li>
+            <li><a href="#repository-information">Repository information</a></li>
+            <li><a href="#versions">Versions</a></li>
+            <li><a href="#enhance-the-experience">Enhance the experience</a></li>
+            <li><a href="#badges">Badges</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="note-for-developers">Note for developers<a class="headerlink" href="#note-for-developers" title="Permanent link">&para;</a></h1>
+<p>For your repository to be added there are a few criteria that need to be met.</p>
+<ul>
+<li>See <a href="../integration">Integration developer</a> for integrations.</li>
+<li>See <a href="../plugin">Plugin developer</a> for plugins.</li>
+</ul>
+<h2 id="repository-information">Repository information<a class="headerlink" href="#repository-information" title="Permanent link">&para;</a></h2>
+<h3 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h3>
+<p>The description of the repository is also the same description that is shown in HACS.</p>
+<h3 id="topics">Topics<a class="headerlink" href="#topics" title="Permanent link">&para;</a></h3>
+<p>Repository topics are not displayed in HACS, but they can be used for searchablility in the HACS store.</p>
+<h2 id="versions">Versions<a class="headerlink" href="#versions" title="Permanent link">&para;</a></h2>
+<p>If the repository uses GitHub releases, the tagname from the latest release is used to set the remote version.</p>
+<p>If the repository does not use those, the 7 first charachters of the last commit will be used.</p>
+<h2 id="enhance-the-experience">Enhance the experience<a class="headerlink" href="#enhance-the-experience" title="Permanent link">&para;</a></h2>
+<p>If you want to add a richer experience for your users you can add an <code>info.md</code> file to the root of your repository (this is optional), this file will be rendered under the repository description, it does not support the full styling options as Github so use with care.</p>
+<p>Some examples of <code>info.md</code> files:</p>
+<h3 id="compact-custom-header"><a href="https://github.com/maykar/compact-custom-header/blob/1.0.4b9/info.md">Compact Custom Header</a><a class="headerlink" href="#compact-custom-header" title="Permanent link">&para;</a></h3>
+<p><img alt="cch" src="../../images/info_cch.PNG" /></p>
+<h3 id="lovelace-swipe-navigation"><a href="https://github.com/maykar/lovelace-swipe-navigation/blob/1.2.0/info.md">Lovelace Swipe Navigation</a><a class="headerlink" href="#lovelace-swipe-navigation" title="Permanent link">&para;</a></h3>
+<p><img alt="swipe" src="../../images/info_swipe.PNG" /></p>
+<h3 id="homeassistant-atrea"><a href="https://github.com/JurajNyiri/HomeAssistant-Atrea/blob/2.1/info.md">HomeAssistant-Atrea</a><a class="headerlink" href="#homeassistant-atrea" title="Permanent link">&para;</a></h3>
+<p><img alt="Atrea" src="../../images/info_atrea.PNG" /></p>
+<h3 id="want-to-add-your-repository-to-the-store-as-a-default">Want to add your repository to the store as a default?<a class="headerlink" href="#want-to-add-your-repository-to-the-store-as-a-default" title="Permanent link">&para;</a></h3>
+<p><a href="../include_default_repositories">See here for how to add a custom repository.</a></p>
+<h2 id="badges">Badges<a class="headerlink" href="#badges" title="Permanent link">&para;</a></h2>
+<p>Tell your users that your repository can be tracked with HACS.</p>
+<h3 id="default-repository">Default repository<a class="headerlink" href="#default-repository" title="Permanent link">&para;</a></h3>
+<p><em>If your repository is in the default store.</em></p>
+<p><a href="https://github.com/custom-components/hacs"><img alt="hacs_badge" src="https://img.shields.io/badge/HACS-Default-orange.svg?style=for-the-badge" /></a></p>
+<pre><code>[![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg?style=for-the-badge)](https://github.com/custom-components/hacs)
+</code></pre>
+
+<hr />
+<p><a href="https://github.com/custom-components/hacs"><img alt="hacs_badge" src="https://img.shields.io/badge/HACS-Default-orange.svg" /></a></p>
+<pre><code>[![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg)](https://github.com/custom-components/hacs)
+</code></pre>
+
+<h3 id="custom-repository">Custom repository<a class="headerlink" href="#custom-repository" title="Permanent link">&para;</a></h3>
+<p><em>If your repository can be added as a custom repository.</em></p>
+<p><a href="https://github.com/custom-components/hacs"><img alt="hacs_badge" src="https://img.shields.io/badge/HACS-Custom-orange.svg?style=for-the-badge" /></a></p>
+<pre><code>[![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg?style=for-the-badge)](https://github.com/custom-components/hacs)
+</code></pre>
+
+<hr />
+<p><a href="https://github.com/custom-components/hacs"><img alt="hacs_badge" src="https://img.shields.io/badge/HACS-Custom-orange.svg" /></a></p>
+<pre><code>[![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/custom-components/hacs)
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+
+        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

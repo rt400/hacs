@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Home Assistant Community Store">
+        
+        <link rel="canonical" href="https://custom-components.github.io/hacs/">
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>HACS</title>
+        <link href="css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="js/jquery-1.10.2.min.js" defer></script>
+        <script src="js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body class="homepage">
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href=".">HACS</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="active">
+                                <a href=".">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Installation <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="installation/manual/">Manual</a>
+</li>
+                                    
+<li >
+    <a href="installation/terminal/">Terminal</a>
+</li>
+                                    
+<li >
+    <a href="installation/configuration/">Configuration</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Usage <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="usage/overview/">Overview</a>
+</li>
+                                    
+<li >
+    <a href="usage/store/">Store</a>
+</li>
+                                    
+<li >
+    <a href="usage/settings/">Settings</a>
+</li>
+                                    
+<li >
+    <a href="usage/repository/">Repository</a>
+</li>
+                                    
+<li >
+    <a href="usage/gallery/">Gallery</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="faq/">FAQ</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Developer? <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="developer/general/">General</a>
+</li>
+                                    
+<li >
+    <a href="developer/appdaemon/">AppDaemon developer</a>
+</li>
+                                    
+<li >
+    <a href="developer/integration/">Integration developer</a>
+</li>
+                                    
+<li >
+    <a href="developer/plugin/">Plugin developer</a>
+</li>
+                                    
+<li >
+    <a href="developer/python_script/">python_script developer</a>
+</li>
+                                    
+<li >
+    <a href="developer/theme/">Theme developer</a>
+</li>
+                                    
+<li >
+    <a href="developer/include_default_repositories/">Include default repositories</a>
+</li>
+                                    
+<li >
+    <a href="developer/blacklist_repository/">Blacklist a Repository</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="https://github.com/custom-components/hacs/issues">Issues</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                            <li class="disabled">
+                                <a rel="next" >
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="installation/manual/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/custom-components/hacs/edit/master/docs/index.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#hacs-home-assistant-community-store">HACS (Home Assistant Community Store)</a></li>
+            <li><a href="#what-can-hacs-do">What can HACS do?</a></li>
+            <li><a href="#updates">Updates</a></li>
+            <li><a href="#logs">Logs</a></li>
+            <li><a href="#startup">Startup</a></li>
+            <li><a href="#existing-elements">Existing elements</a></li>
+            <li><a href="#local-data-storage">Local data storage</a></li>
+            <li><a href="#hacs-sensor">HACS Sensor</a></li>
+            <li><a href="#contribute">Contribute</a></li>
+            <li><a href="#last-notes-from-the-initial-developer">Last notes from the initial developer</a></li>
+            <li><a href="#bugs-issues-suggestions">Bugs / issues / suggestions</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="hacs-home-assistant-community-store">HACS (Home Assistant Community Store)<a class="headerlink" href="#hacs-home-assistant-community-store" title="Permanent link">&para;</a></h1>
+<p><img alt="hacsdemo" src="images/hacsdemo.gif" /></p>
+<hr />
+<h2 id="what-can-hacs-do">What can HACS do?<a class="headerlink" href="#what-can-hacs-do" title="Permanent link">&para;</a></h2>
+<p>This is a manager for your custom Home Assistant needs.</p>
+<p>It can help you download and update elements.</p>
+<p>It can also help you discover new awesome stuff.</p>
+<h3 id="what-can-it-trackdiscover">What can it track/discover?<a class="headerlink" href="#what-can-it-trackdiscover" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Custom integrations (components/platforms/custom_component) for Home Assistant</li>
+<li>Custom plugins (cards/rows/mods) for Lovelace</li>
+<li>AppDaemon apps for <a href="https://appdaemon.readthedocs.io/en/latest/">AppDaemon</a></li>
+<li>Themes for the <a href="https://www.home-assistant.io/components/frontend/">frontend integration</a> in Home Assistant</li>
+<li>"python_scripts" for the <a href="https://www.home-assistant.io/components/python_script/"><code>python_scripts</code> integration</a> in Home Assistant</li>
+</ul>
+<h2 id="updates">Updates<a class="headerlink" href="#updates" title="Permanent link">&para;</a></h2>
+<h3 id="installed-elements">Installed elements<a class="headerlink" href="#installed-elements" title="Permanent link">&para;</a></h3>
+<p>HACS will check for updates to installed elements:</p>
+<ul>
+<li>At startup.</li>
+<li>Every 30 minutes after HA startup.</li>
+</ul>
+<h3 id="everything-else">Everything else<a class="headerlink" href="#everything-else" title="Permanent link">&para;</a></h3>
+<p>HACS will check for updates to every element:</p>
+<ul>
+<li>At startup</li>
+<li>Every 500 minutes after HA startup.</li>
+</ul>
+<h3 id="manually-trigger-updates">Manually trigger updates<a class="headerlink" href="#manually-trigger-updates" title="Permanent link">&para;</a></h3>
+<p>You can also force a check by clicking the "RELOAD DATA" button under the "SETTINGS" tab <em>(This will force a reload of everything.)</em></p>
+<p>Under the "SETTINGS" tab there is also a reload icon to the left of every custom repository you have added, clicking that will reload info for it.</p>
+<p>On each RepositoryView (the page with details about the element) there is a reload icon at the top-right corner, clicking that will reload it.</p>
+<h2 id="logs">Logs<a class="headerlink" href="#logs" title="Permanent link">&para;</a></h2>
+<p>Like any other integration this logs to the <code>home-assistant.log</code> file.</p>
+<p>You can also click the "OPEN LOG" from the "SETTINGS" tab to show logs only related to this integration (useful when creating a issue)</p>
+<p>To enable <code>debug</code> logging, add this to your <code>configuration.yaml</code>:</p>
+<pre><code class="yaml">logger:
+  default: info
+  logs:
+    custom_components.hacs: debug
+</code></pre>
+
+<h2 id="startup">Startup<a class="headerlink" href="#startup" title="Permanent link">&para;</a></h2>
+<p>During the startup it will scan for know repositories, and there will be a progressbar indicating that it's working.</p>
+<p><img alt="startup" src="images/bg_task.PNG" /></p>
+<p>This is completely normal, and you can still use it while it's working.
+The same indication will show when a scheduled task is running.</p>
+<h2 id="existing-elements">Existing elements<a class="headerlink" href="#existing-elements" title="Permanent link">&para;</a></h2>
+<p>This will not scan you local file system for existing elements.</p>
+<p>Why?</p>
+<p>Trust. If this did not download it, there'd be no way to know which version you have, so for elements you already have you will still need to click the "INSTALL" button for that element.</p>
+<h2 id="local-data-storage">Local data storage<a class="headerlink" href="#local-data-storage" title="Permanent link">&para;</a></h2>
+<p>All data it handles are saved to the <code>hacs</code> file that is located under <code>.storage</code></p>
+<h2 id="hacs-sensor">HACS Sensor<a class="headerlink" href="#hacs-sensor" title="Permanent link">&para;</a></h2>
+<p>During the setup HACS will add a new sensor to your installation (<code>sensor.hacs</code>).
+This will have the number of pending updates as the state.</p>
+<p><img alt="sensor" src="https://user-images.githubusercontent.com/15093472/59136215-5ff29d00-8982-11e9-860f-75d382a4d3b7.png" /></p>
+<hr />
+<h2 id="contribute">Contribute<a class="headerlink" href="#contribute" title="Permanent link">&para;</a></h2>
+<p>This integration is <strong>massive</strong> and there are a lot of areas to contribute to.</p>
+<p>Contributions to the docs, will almost be blindly accepted.</p>
+<p><em>Contributions for the documentation should go against the <code>master</code> branch.</em></p>
+<h3 id="for-contributions-to-the-integration-itself-backendfrontend">For contributions to the integration itself (backend/frontend)<a class="headerlink" href="#for-contributions-to-the-integration-itself-backendfrontend" title="Permanent link">&para;</a></h3>
+<p><em>Contributions for the integration should go against the <code>next</code> branch.</em></p>
+<p>If the contribution is minor, make the change and open a PR (Pull Request).</p>
+<p>For new features, changes to existing features, or other big changes, please open an RFC (Request for comment) issue before you start the work.</p>
+<hr />
+<h2 id="last-notes-from-the-initial-developer">Last notes from the initial developer<a class="headerlink" href="#last-notes-from-the-initial-developer" title="Permanent link">&para;</a></h2>
+<p>First startup after installation will take some time, but it's worth it.</p>
+<p>This was developed under the influence of 🍺, a lot of 🍺, <a href="https://buymeacoffee.com/ludeeus">if you want to support my work feel free to buy me a ☕️ (most likely 🍺)</a></p>
+<p>How it works and what it does are added based on a single persons mindset, you may not agree with what I have done, if you have a suggestion please open an <a href="https://github.com/custom-components/hacs/issues">RFC</a>.</p>
+<h2 id="bugs-issues-suggestions">Bugs / issues / suggestions<a class="headerlink" href="#bugs-issues-suggestions" title="Permanent link">&para;</a></h2>
+<p>If you find bugs/issues or have any suggestions please open an issue in the <a href="https://github.com/custom-components/hacs/issues">HACS Repository</a></p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js" defer></script>
+
+        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.0.4
+Build Date UTC : 2019-07-02 08:56:25
+-->
